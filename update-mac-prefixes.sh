@@ -24,5 +24,6 @@ then
   echo "Moving old arpwatch MAC database"
   mv -f "$arpwatch" "$arpwatch.old"
   sed -r 's/^(([^0].)|0(.))(([^0].)|0(.))(([^0].)|0(.)) /\2\3:\5\6:\8\9\t/' < /tmp/oui.txt.sort > "$arpwatch"
+  chown -R arpwatch:arpwatch `dirname $arpwatch`
   echo "Updated arpwatch MAC database with `cat \"$arpwatch\" | wc -l` prefixes"
 fi
