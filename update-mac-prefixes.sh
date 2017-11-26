@@ -1,6 +1,8 @@
 #!/bin/sh
 
-### make this a cron job to have nmap and arpwatch MAC prefix databases updated, if they exist
+# parts of this have maybe been stolen from somebody else's script, but I don't remember where - sorry ;)
+
+### run this via cron to have nmap and arpwatch MAC prefix databases updated, if they exist
 
 url="http://standards-oui.ieee.org/oui/oui.txt"
 nmap="/usr/share/nmap/nmap-mac-prefixes"
